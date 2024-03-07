@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow_all1" {
+resource "aws_security_group" "allow_all" {
     name = var.sg_name
     description = "Allow all inbound traffic and all outbound traffic"
 
