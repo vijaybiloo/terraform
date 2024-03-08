@@ -10,10 +10,22 @@ variable "instance_type" {
 
 variable "sg_name" {
     type = string
-    default = "allow_all1"
+    default = "allow_all"
 }
 
 variable "sg_cidr" {
     type = list
     default = ["0.0.0.0/0"]
+}
+
+variable "tags" {
+    type = map
+    default = {
+      Name = "mongodb"
+        Environment = "DEV"
+        Terraform = "true"
+        Project = "Roboshop"
+        Component = "mongodb"
+    }
+
 }
