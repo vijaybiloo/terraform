@@ -24,5 +24,5 @@ resource "aws_route53_record" "www" {
 # }
 
 output "instance_ips" {
-  value = "aws_instance.ips"
+  value = "aws_instance.roboshop"
 }

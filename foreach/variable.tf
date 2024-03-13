@@ -30,3 +30,35 @@ variable "domain" {
   type        = string
   default     = "vijaydeepak0812.online"
 }
+
+variable "ingress" {
+  type        = list
+  default     = [
+    {
+            description      = "allow PORT 80 HTTP from public"
+            from_port        = 80
+            to_port          = 80
+            protocol         = "tcp"
+            cidr_blocks      = ["0.0.0.0/0"]
+    },
+            
+    {
+            description      = "allow PORT 443 HTTPS from public"
+            from_port        = 443
+            to_port          = 443
+            protocol         = "tcp"
+            cidr_blocks      = ["0.0.0.0/0"]
+    },
+
+    {
+            description      = "allow PORT 22 SSH from public"
+            from_port        = 22
+            to_port          = 22
+            protocol         = "tcp"
+            cidr_blocks      = ["0.0.0.0/0"]
+
+    }
+
+    ]
+  
+}
