@@ -19,6 +19,7 @@ terraform {
 
 } */
 
+}
 provider "aws" {
   # Configuration options
   # We can access key and secret key but we have sucerity issues
