@@ -21,4 +21,9 @@ module "this" {
    database_subnet_cidr = var.database_subnet_cidr
    database_subnet_names =var.database_subnet_names
 
+# Public, private and data route table creation
+
+  public_route_table_tags = var.public_route_table_tags
+  private_route_table_tags = var.private_route_table_tags
+  database_route_table_tags = var.database_route_table_tags
 }

@@ -1,5 +1,5 @@
 variable "cidr_block" {
-  #default = "0.0.0.0/0"
+  #default = "10.0.0.0/16"
 }
 
 variable "enable_dns_hostnames" {
@@ -52,3 +52,14 @@ variable "database_subnet_names"{
 
 }
 
+variable "public_route_table_tags" {
+  default = {} # this means tags is optional
+}
+
+variable "private_route_table_tags" {
+  default = {} # this means tags is optional
+}
+
+variable "database_route_table_tags" {
+  default = {} # this means tags is optional
+}

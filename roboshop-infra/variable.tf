@@ -1,5 +1,5 @@
 variable "cidr_block" {
-  default     = "0.0.0.0/16"
+  default     = "10.0.0.0/16"
 }
 
 variable "common_tags" {
@@ -50,4 +50,22 @@ variable "database_subnet_cidr" {
 
 variable "database_subnet_names" {
   default     = ["roboshop-database-1a", "roboshop-database-1b"]
+}
+
+variable "public_route_table_tags" {
+    default = {
+        Name ="roboshop-public"
+    }
+}
+
+variable "private_route_table_tags" {
+    default = {
+        Name ="roboshop-private"
+    }
+}
+
+variable "database_route_table_tags" {
+    default = {
+        Name ="roboshop-data"
+    }
 }
