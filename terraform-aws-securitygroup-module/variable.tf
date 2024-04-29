@@ -3,7 +3,7 @@ variable "sg_name"{
 }
 
 variable "sg_description"{
-    default = {}
+    default = ""
 }
 
 variable "vpc_id"{

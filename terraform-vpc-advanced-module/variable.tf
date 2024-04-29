@@ -71,3 +71,19 @@ variable "database_route_table_tags" {
 variable "db_subnet_group_tags" {
   default     = {}
 }
+
+variable "is_peering_requried" {
+  default     = false
+}
+
+variable "requester_vpc_id" {
+default = {}
+}
+
+variable "default_route_table_id"{
+default = {}
+}
+
+variable "default_vpc_cidr"{
+default = {}
+}
