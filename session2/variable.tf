@@ -10,10 +10,10 @@ variable "ami_id" {
 }
 
 variable "zone_id" {
-    default = "Z01884332TBS4FMFS9HVB"
+    default = "Z0630267198Z1Q0Y8S23T"
 }
 
 variable "domain" {
   type = string
-  default = "vijaydeepak0812.online"
+  default = "jiondevops.site"
 }
