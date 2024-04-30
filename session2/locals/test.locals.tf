@@ -1,4 +1,4 @@
-resource "aws_instance" "count" {
+resource "aws_instance" "conditions" {
     count = 10
     ami = local.ami_id # devops-practice region is us -east 1
     # instance_type = var.instance_name == "mongoDB" ? "t3.medium" : "t2.micro"
@@ -17,7 +17,7 @@ resource "aws_route53_record" "record" {
     name    = "${var.instance_names[count.index]}.${var.domain}"
     type    = "A"
     ttl     = 3
-    records = [aws_instance.count[count.index].private_ip]
+    records = [aws_instance.conditions[count.index].private_ip]
 }
 
 resource "aws_key_pair" "deployer" {
