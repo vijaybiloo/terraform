@@ -9,7 +9,7 @@ resource "aws_instance" "roboshop" {
 
 resource "aws_route53_record" "www" {
   zone_id = var.zone_id
-  name    = "${each.key}.${var.domain_id}"
+  name    = "${each.key}.${var.domain}"
   type    = "A"
   ttl     = 3
   records = [each.key == "Web-Nginx" ? each.value.public_ip : each.value.private_ip ]

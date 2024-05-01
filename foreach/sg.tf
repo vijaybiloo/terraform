@@ -8,7 +8,7 @@ resource "aws_security_group" "roboshop" {
     content {
         description = ingress.value["description"]
         protocol  = ingress.value.protocol
-        from_port = ingress.value.to_port
+        from_port = ingress.value.from_port
         to_port   = ingress.value.to_port
         cidr_blocks = ingress.value.cidr_blocks
     }

@@ -24,7 +24,7 @@ variable "zone_id" {
   default = "Z0630267198Z1Q0Y8S23T"
 }
 
-variable "domain_id" {
+variable "domain" {
   default = "jiondevops.site"
 }
 
