@@ -85,7 +85,7 @@ resource "aws_security_group" "allow_http_ssh" {
         from_port        = 22
         to_port          = 22
         protocol         = "tcp"
-        cidr_blocks      = ["192.168.143.26/32"]
+        cidr_blocks      = ["152.58.245.176/32"] # ["192.168.143.26/32"]
     }
 
     egress {
@@ -101,8 +101,8 @@ resource "aws_security_group" "allow_http_ssh" {
     }
 }
 
-resource "aws_instance" "this" {
-    ami = "ami-02d7fd1c2af6eead0"
+resource "aws_instance" "Web-nginx" {
+    ami = "ami-0f3c7d07486cad139" # "ami-02d7fd1c2af6eead0"
     instance_type = "t2.micro"
     subnet_id = aws_subnet.public.id
     vpc_security_group_ids = [aws_security_group.allow_http_ssh.id]
