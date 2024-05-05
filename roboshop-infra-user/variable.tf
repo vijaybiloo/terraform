@@ -55,6 +55,5 @@ variable "instances" {
 }
 
 variable "zone_name" {
-  #default = "jiondevops.site"
-  default = "vijaydeepak0812.online"
+  default = "jiondevops.site"
 }
